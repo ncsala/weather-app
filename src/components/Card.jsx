@@ -1,16 +1,15 @@
 import React from "react";
 
-export default function Card({ max, min, name, img, onClose, key }) {
+export default function Card({ max, min, name, img, onClose }) {
   // Se Corrobora que onClose sea una funcion, si lo es se ejecuta
   function handleOnClose() {
     if (typeof onClose === "function") onClose();
   }
-  console.log(key)
+
   return (
     <div>
       <button onClick={handleOnClose}>X</button>
       <span>{name}</span>
-      <label>{key}</label>
       <div>
         <label>Min</label>
         <span>{min}</span>
