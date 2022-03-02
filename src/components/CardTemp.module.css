@@ -1,0 +1,12 @@
+.temp {
+  display: flex;
+  flex-direction: column;
+  width: 3rem;
+  justify-content: center;
+  text-align: center;
+}
+
+/*si existe temperatura a la derecha, aplica el margen */
+/* .temp + .temp {
+  margin-left: 5rem;
+} */
