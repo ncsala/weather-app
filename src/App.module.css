@@ -1,7 +1,7 @@
 .app {
   position: absolute;
   background-image: url("./assets/1.jpg");
-  background-size: cover; 
+  background-size: cover;
   top: 0;
   right: 0;
   left: 0;
@@ -18,7 +18,7 @@
 .container {
   position: absolute;
   background-image: url("./assets/1.jpg");
-  background-size: cover; 
+  background-size: cover;
   top: 0;
   width: 70vw;
   height: 70vh;
@@ -35,14 +35,3 @@
   grid-template-columns: 1fr;
   grid-template-rows: 47vh 23vh;
 }
-
-.citiesContainer {
-  display: flex;
-  height: 23vh;
-  background-color: #ffffff70;
-  backdrop-filter: blur(4px);
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-
-}
-

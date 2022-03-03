@@ -1,0 +1,8 @@
+.citiesContainer {
+  display: flex;
+  height: 23vh;
+  background-color: #ffffff70;
+  backdrop-filter: blur(4px);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
