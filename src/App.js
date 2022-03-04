@@ -1,27 +1,35 @@
-import React from 'react';
-import './App.css';
-import Cards from './components/Cards.jsx';
-import SearchBar from './components/SearchBar.jsx';
-import data from './data.js';
+import React from "react";
+import styles from "./App.module.css";
+import fetchCity from "./services/fetchCity";
+import CitiesPage from "./views/CitiesPage";
+import { Route } from "react-router-dom";
 
 function App() {
+  const [cities, setCities] = React.useState([]);
+
+  function onSearch(city) {
+    if (cities.length > 6) {
+      alert("No se pueden agregar más ciudades");
+    } else {
+      fetchCity(city, setCities);
+    }
+  }
+
+  function handleOnClose(id) {
+    setCities((prevData) => prevData.filter((city) => city.id !== id));
+  }
 
   return (
-    <div className="App">
-      <hr />
-      
-      <div>
-        <Cards
-          cities={data}
-        />
-      </div>
-      
-      <hr />
-      
-      <div>
-        <SearchBar
-          onSearch={(ciudad) => alert(ciudad)}
-        />
+    <div className={styles.app}>
+      <div className={styles.bkg} />
+      <div className={styles.container}>
+        <Route path='/'>
+          <CitiesPage
+            cities={cities}
+            handleOnClose={handleOnClose}
+            onSearch={onSearch}
+          />
+        </Route>
       </div>
     </div>
   );
